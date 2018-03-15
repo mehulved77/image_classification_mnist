@@ -1,6 +1,11 @@
 if __name__=="__main__":
-    from DeepModel import x_train, y_train, x_test, y_test
-    from DeepModel import large_cnn_model, batch_size
+
+import argparse
+parser = argparse.ArgumentParser()
+args = parser.parse_args()
+    
+    from DeepModel_Option import x_train, y_train, x_test, y_test
+    from DeepModel_Option import large_cnn_model, batch_size
     
     
 # Fit the model

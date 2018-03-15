@@ -11,7 +11,8 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D
 
-from data_cifar100 import x_train, y_train, x_test, y_test, batch_size, num_classes, input_shape
+global args
+from args import x_train, y_train, x_test, y_test, batch_size, num_classes, input_shape
 
 
 np.set_printoptions(precision=5, suppress=True)
