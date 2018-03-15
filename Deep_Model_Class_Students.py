@@ -43,7 +43,7 @@ class DeepModel:
     def cnn(self):
     # create model
         model = Sequential()
-        model.add(Conv2D(30, (5, 5), input_shape=input_shape, activation='relu'))
+        model.add(Conv2D(30, (5, 5), input_shape= self.input_shape, activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Conv2D(15, (3, 3), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2))) 
@@ -52,7 +52,7 @@ class DeepModel:
         model.add(Dense(128, activation='relu'))
         model.add(Dropout(0.2))
         model.add(Dense(50, activation='relu'))
-        model.add(Dense(num_classes, activation='softmax'))
+        model.add(Dense(self.num_classes, activation='softmax'))
         # Compile model
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
         self.model = model
